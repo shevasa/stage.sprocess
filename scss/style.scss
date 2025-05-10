@@ -111,22 +111,43 @@ img {
         font-size: 40px;
         color: var(--primary-color);
         font-weight: 600;
-        max-width: 700px;
+        max-width: 850px;
         margin: 0 auto 16px;
     }
     &__text {
         margin-bottom: 24px;
     }
     &__video {
-        width: 560px;
-        height: 315px;
-        border-radius: 8px;
+        width: 765px;
+        height: 430px;
+        border-radius: 12px;
         overflow: hidden;
         margin: 0 auto 24px;
-        background: #000;
+        background: rgba(0, 0, 0, 0.5);
+        position: relative;
         &-file {
             width: 100%;
             height: 100%;
+            pointer-events: none;
+        }
+        &-btn {
+            position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // translate: -50% -50%;
+            bottom: 16px;
+            left: 16px;
+            border: none;
+            padding: 5px 12px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            border-radius: 4px;
+            width: 30px;
+            min-width: 30px;
+            height: 30px;
+            font-size: 0;
+            background: center / 90% no-repeat url("../images/play.svg");
         }
     }
     &__btn {
@@ -368,6 +389,18 @@ img {
 }
 
 @media (max-width: 1023px) {
+    .hero {
+        &__video {
+            position: relative;
+            padding-top: 56.2%;
+            width: 100%;
+            height: auto;
+            &-file {
+                position: absolute;
+                inset: 0;
+            }
+        }
+    }
     .reviews {
         .container {
             padding-right: 0;
@@ -435,26 +468,16 @@ img {
         &__inner {
             padding-bottom: 48px;
         }
-        &__video {
-            padding-top: 56.27%;
-            position: relative;
-            width: 100%;
-            height: auto;
-            &-file {
-                position: absolute;
-                inset: 0;
-            }
-        }
         &__subtitle {
             font-size: 18px;
-            max-width: 230px;
+            max-width: 300px;
             margin: 0 auto 16px;
         }
         &__title {
             font-size: 30px;
         }
         &__video {
-            border-radius: 4px;
+            border-radius: 8px;
         }
     }
     .contact {
