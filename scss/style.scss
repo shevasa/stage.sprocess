@@ -465,6 +465,9 @@ img {
         &__inner {
             padding-bottom: 48px;
         }
+        &__social {
+            bottom: 48px;
+        }
         &__subtitle {
             font-size: 18px;
             max-width: 300px;
@@ -474,7 +477,14 @@ img {
             font-size: 30px;
         }
         &__video {
-            border-radius: 8px;
+            border-radius: 6px;
+            &-btn {
+                width: 20px;
+                min-width: 20px;
+                height: 20px;
+                bottom: 12px;
+                left: 12px;
+            }
         }
     }
     .contact {
